@@ -5,9 +5,10 @@
 
 ## Installation
 
-## copy and activate
+### copy and activate
 Copy the plugin to your projects plugins folder.
 You have to activate the Plugin in your global ProjectConfiguration.
+
     class ProjectConfiguration extends sfProjectConfiguration { 
         ...
         public function setup()	{
@@ -32,15 +33,16 @@ This is an Environment specific yml Config like the most symfony config files.
 
 The following settings are supported
 Example:
+
     ../config/app_routing.yml
     all:
       # key is the application name
       # optionally you can use the :sf_culture placeholder to inject the cluture in path prefix
       online_guard: 
-        domain: http://ifb.berlinale.de
+        domain: http://some.website.de
         route_prefix: :domain/:sf_culture/path/to/online_guard
       online_boa:
-        domain: http://ifb.berlinale.de
+        domain: http://some.website.de
         route_prefix: :domain/:sf_culture/path/to/online_boa
 
 ## Usage
