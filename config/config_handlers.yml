@@ -1,0 +1,5 @@
+config/app_routing.yml:
+  class:    itCrossAppConfigHandler
+  file:     %SF_PLUGINS_DIR%/itCrossAppRoutingPlugin/lib/config/itCrossAppConfigHandler.class.php
+  param:
+    prefix:  sf_app_routing

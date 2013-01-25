@@ -1,0 +1,7 @@
+parameters:
+  testparam: foo
+
+services:
+  app_routing:
+    class:     itCrossAppRoutingService
+    shared:    true

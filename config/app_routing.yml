@@ -1,0 +1,65 @@
+all: &default
+  domain: http://www.cornelsen.de
+  duden_domain: http://www.duden-schulverlage.de
+  duden_sbk_base:
+  #    domain: can/be/specified/here
+      route_prefix: :duden_domain/:alias/
+  sbk_base:
+#    domain: can/be/specified/here
+    route_prefix: :domain/:alias/
+  lehrkraefte:
+#    domain: can/be/specified/here
+    route_prefix: :domain/lehrkraefte
+  home:
+#    domain: can/be/specified/here
+    route_prefix: :domain/home
+
+
+dev_test: &dev_test
+  <<: *default
+  domain: http://test.cornelsen.de
+  duden_domain: http://test.cornelsen.de
+
+test:
+  <<: *dev_test
+
+dev_test2: &dev_test2
+  <<: *default
+  domain: http://test2.cornelsen.de
+  duden_domain: http://test2.cornelsen.de
+
+test2:
+  <<: *dev_test2
+
+dev_referenz: &dev_referenz
+  <<: *default
+  domain: http://referenz.cornelsen.de
+  duden_domain: http://referenz.cornelsen.de
+
+referenz:
+  <<: *dev_referenz
+
+dev_entwicklung: &dev_entwicklung
+  <<: *default
+  domain: http://entwicklung.cornelsen.de
+  duden_domain: http://entwicklung.cornelsen.de
+
+entwicklung:
+  <<: *dev_entwicklung
+
+dev_entwicklung2: &dev_entwicklung2
+  <<: *default
+  domain: http://entwicklung2.cornelsen.de
+  duden_domain: http://entwicklung2.cornelsen.de
+
+entwicklung2:
+  <<: *dev_entwicklung2
+
+
+dev_local: &dev_local
+  <<: *default
+  domain: http://cornelsen.vbox
+  duden_domain: http://cornelsen.vbox
+
+prod_local:
+  <<: *dev_local
